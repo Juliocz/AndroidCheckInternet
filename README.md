@@ -10,13 +10,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-HCheckInternet nH_checkInternet=new HCheckInternet();
+        HCheckInternet nH_checkInternet=new HCheckInternet();
         nH_checkInternet.setListener(new HCheckInternet.onlinelistener() {
         @Override
         public void isConnect(boolean connect) {
             //recibe señal true o false si hay conexionreal, la conexion se verifica cada 1,5s
         }});nH_checkInternet.execute();//Inicia el hilo
-        nH_checkInternet.stop();//detiene el hilo
+            nH_checkInternet.stop();//detiene el hilo
         
         }   
  }
