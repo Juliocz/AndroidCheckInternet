@@ -9,7 +9,8 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
-
+import android.net.ConnectivityManager;
+import android.content.Context;
 /**
  *
  * @author pc 9
@@ -63,8 +64,23 @@ public class HCheckInternet extends AsyncTask<String,String,String> {
             //e.printStackTrace();
         return false;
         }
-
-
     }
+    
+    public boolean isNetworkRedconnect(Context context)//solo verifica conexion de red
+    {
+        try {
+            ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo networkInfo = cm.getActiveNetworkInfo();
+            if (networkInfo != null && networkInfo.isConnected() && networkInfo.isAvailable())
+            {   System.out.println("Conexion de Red Activa");
+            return true;}
+        }catch (Exception e)
+        {   System.out.println("Conexion de Red No activa");
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
+    
 }
 
