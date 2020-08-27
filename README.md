@@ -1,6 +1,8 @@
 # AndroidCheckInternetReal
 Bueno queria compartirles este pequeño aporte, con la cual podran codificar y saber cuando hay conexion real de internet
 isNetworkRedconnect(Context context)
+Como verificar la conexion de internet en android java.
+Verificar conexion de internet real Android java
 # Verificando la Conexion real de internet...
 En este ejemplo, podemos verificar si hay una conexion real a internet.
 ```java
