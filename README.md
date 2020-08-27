@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         public void isConnect(boolean connect) {
             //recibe señal true o false si hay conexionreal, la conexion se verifica cada 1,5s
         }});nH_checkInternet.execute();//Inicia el hilo
-            nH_checkInternet.stop();//detiene el hilo
+            //nH_checkInternet.stop();//detiene el hilo
         
         }   
  }
