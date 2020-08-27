@@ -1,7 +1,8 @@
 # AndroidCheckInternetReal
 Bueno queria compartirles este pequeño aporte, con la cual podran codificar y saber cuando hay conexion real de internet
-
-# Aqui les muestro un ejemplo...
+isNetworkRedconnect(Context context)
+# Verificando la Conexion real de internet...
+En este ejemplo, podemos verificar si hay una conexion real a internet.
 ```java
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,23 @@ public class MainActivity extends AppCompatActivity {
             //recibe señal true o false si hay conexionreal, la conexion se verifica cada 1,5s
         }});nH_checkInternet.execute();//Inicia el hilo
             nH_checkInternet.stop();//detiene el hilo
+        
+        }   
+ }
+```
+
+# Verificando solo la conexion de Red (Wifi o Datos) 
+Esto no garantiza que exista conexion real, solo que la conexion de red esta activa
+```java
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        HCheckInternet nH_checkInternet=new HCheckInternet();
+        nH_checkInternet.isNetworkRedconnect(this); //Solo verifica si hay conexion de red Activa
         
         }   
  }
