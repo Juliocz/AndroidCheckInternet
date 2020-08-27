@@ -34,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         
         HCheckInternet nH_checkInternet=new HCheckInternet();
-        nH_checkInternet.isNetworkRedconnect(this); //Solo verifica si hay conexion de red Activa
-        
+        if(nH_checkInternet.isNetworkRedconnect(this)); //Solo verifica si hay conexion de red Activa
+        {//Existe conexion de red}
+        else
+        {//No hay conexion de red}
         }   
  }
 ```
